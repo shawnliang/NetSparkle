@@ -20,7 +20,8 @@ namespace AppLimit.NetSparkle
             InitializeComponent();
 
             // init logfile
-            sw = File.CreateText(Path.Combine(Environment.ExpandEnvironmentVariables("%temp%"), "NetSparkle.log"));
+            var fs = File.Open(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "NetSparkle.log"), FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite);
+            sw = new StreamWriter(fs);
         }
 
         public void Report(String message)
