@@ -358,7 +358,7 @@ namespace AppLimit.NetSparkle
         /// </summary>
         /// <param name="config"></param>
         /// <returns></returns>
-        public Boolean IsUpdateRequired(NetSparkleConfiguration config, out NetSparkleAppCastItem latestVersion)
+        public Boolean IsUpdateRequired(NetSparkleConfiguration config, out NetSparkleAppCastItem latestVersion, bool honorSkipVersion = true)
         {
             // report
             ReportDiagnosticMessage("Downloading and checking appcast");
@@ -395,7 +395,7 @@ namespace AppLimit.NetSparkle
             config.TouchCheckTime();
 
             // check if the available update has to be skipped
-            if (latestVersion.Version.Equals(config.SkipThisVersion))
+            if (honorSkipVersion && latestVersion.Version.Equals(config.SkipThisVersion))
             {
                 ReportDiagnosticMessage("Latest update has to be skipped (user decided to skip version " + config.SkipThisVersion + ")");
                 return false;
