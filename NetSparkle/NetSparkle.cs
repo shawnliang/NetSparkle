@@ -433,10 +433,10 @@ namespace AppLimit.NetSparkle
         /// update process
         /// </summary>
         /// <param name="currentItem"></param>
-        public void ShowUpdateNeededUI(NetSparkleAppCastItem currentItem)
+        public void ShowUpdateNeededUI(NetSparkleAppCastItem currentItem, bool forceUpdate = false)
         {
             // create the form
-            NetSparkleForm frm = new NetSparkleForm(currentItem, ApplicationIcon, ApplicationWindowIcon);
+            NetSparkleForm frm = new NetSparkleForm(currentItem, ApplicationIcon, ApplicationWindowIcon, forceUpdate);
 
             // configure the form
             frm.TopMost = true;
