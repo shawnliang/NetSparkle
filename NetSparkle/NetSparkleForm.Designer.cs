@@ -89,13 +89,12 @@
 			// 
 			resources.ApplyResources(this.NetSparkleBrowser, "NetSparkleBrowser");
 			this.NetSparkleBrowser.IsWebBrowserContextMenuEnabled = false;
-			this.NetSparkleBrowser.MinimumSize = new System.Drawing.Size(20, 28);
 			this.NetSparkleBrowser.Name = "NetSparkleBrowser";
 			// 
 			// imgAppIcon
 			// 
-			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Image = global::AppLimit.NetSparkle.Properties.Resources.software_update_available1;
+			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Name = "imgAppIcon";
 			this.imgAppIcon.TabStop = false;
 			// 
