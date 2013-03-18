@@ -61,8 +61,8 @@
 			// 
 			// imgAppIcon
 			// 
-			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Image = global::AppLimit.NetSparkle.Properties.Resources.software_update_available1;
+			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Name = "imgAppIcon";
 			this.imgAppIcon.TabStop = false;
 			// 
@@ -81,7 +81,6 @@
 			this.TopMost = true;
 			((System.ComponentModel.ISupportInitialize)(this.imgAppIcon)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
         }
 
