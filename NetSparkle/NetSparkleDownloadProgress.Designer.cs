@@ -61,8 +61,8 @@
 			// 
 			// imgAppIcon
 			// 
-			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Image = global::AppLimit.NetSparkle.Properties.Resources.software_update_available1;
+			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Name = "imgAppIcon";
 			this.imgAppIcon.TabStop = false;
 			// 
@@ -76,6 +76,7 @@
 			this.Controls.Add(this.progressDownload);
 			this.Controls.Add(this.lblHeader);
 			this.Controls.Add(this.imgAppIcon);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "NetSparkleDownloadProgress";
 			this.ShowInTaskbar = false;
 			this.TopMost = true;

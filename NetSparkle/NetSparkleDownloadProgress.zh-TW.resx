@@ -121,11 +121,30 @@
   <data name="lblHeader.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 11</value>
+  </data>
+  <data name="lblHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 20</value>
+  </data>
   <data name="progressDownload.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="progressDownload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 34</value>
+  </data>
+  <data name="progressDownload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 21</value>
+  </data>
   <data name="btnInstallAndReLaunch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="btnInstallAndReLaunch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 34</value>
+  </data>
+  <data name="btnInstallAndReLaunch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 21</value>
   </data>
   <data name="btnInstallAndReLaunch.Text" xml:space="preserve">
     <value>安裝並重新啟動</value>
@@ -133,13 +152,27 @@
   <data name="lblSecurityHint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblSecurityHint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 58</value>
+  </data>
+  <data name="lblSecurityHint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 31</value>
+  </data>
   <data name="lblSecurityHint.Text" xml:space="preserve">
     <value>本次更新是未經驗證的版本，安裝的話可能會有風險！</value>
   </data>
   <data name="imgAppIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="imgAppIcon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 11</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>368, 91</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAEBAAAAEAIABoBAAAJgAAADAwAAABACAAqCUAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAE
