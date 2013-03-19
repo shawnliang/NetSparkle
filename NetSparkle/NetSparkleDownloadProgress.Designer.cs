@@ -76,6 +76,7 @@
 			this.Controls.Add(this.progressDownload);
 			this.Controls.Add(this.lblHeader);
 			this.Controls.Add(this.imgAppIcon);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "NetSparkleDownloadProgress";
 			this.ShowInTaskbar = false;
 			this.TopMost = true;
