@@ -87,9 +87,11 @@
 			// 
 			// NetSparkleBrowser
 			// 
+			this.NetSparkleBrowser.AllowWebBrowserDrop = false;
 			resources.ApplyResources(this.NetSparkleBrowser, "NetSparkleBrowser");
 			this.NetSparkleBrowser.IsWebBrowserContextMenuEnabled = false;
 			this.NetSparkleBrowser.Name = "NetSparkleBrowser";
+			this.NetSparkleBrowser.WebBrowserShortcutsEnabled = false;
 			// 
 			// imgAppIcon
 			// 
@@ -132,6 +134,6 @@
         private System.Windows.Forms.Button buttonRemind;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.WebBrowser NetSparkleBrowser;
+		private System.Windows.Forms.WebBrowser NetSparkleBrowser;
     }
 }

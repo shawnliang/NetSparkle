@@ -8,31 +8,51 @@ namespace AppLimit.NetSparkle
 	public partial class NetSparkleForm : Form
 	{
 		NetSparkleAppCastItem _currentItem;
-		
-		public NetSparkleForm(NetSparkleAppCastItem item, Image appIcon, Icon windowIcon, bool forceUpdate = false)
-		{            
+
+		#region Static Var
+        private static NetSparkleForm _instance;
+        #endregion
+
+        #region Public Static Property
+        public static NetSparkleForm Instance
+        { 
+            get
+            {
+                return _instance ?? (_instance = new NetSparkleForm());
+            }
+        }
+        #endregion
+
+		private NetSparkleForm()
+		{
 			InitializeComponent();
-			
-			// init ui 
-			try
-			{
-				NetSparkleBrowser.AllowWebBrowserDrop = false;
-				NetSparkleBrowser.AllowNavigation = false;
-				this.Icon = Resources.Icon;
-			}
-			catch (Exception)
-			{ }
-			
+
+			this.Icon = Resources.Icon;
+
+			this.Disposed += NetSparkleForm_Disposed;
+		}
+
+		void NetSparkleForm_Disposed(object sender, EventArgs e)
+		{
+			_instance = null;
+		}
+
+		public void UpdateData(NetSparkleAppCastItem item, Image appIcon, Icon windowIcon, bool forceUpdate = false)
+		{
 			_currentItem = item;
+
+			var resources = new System.ComponentModel.ComponentResourceManager(typeof(NetSparkleForm));
+			resources.ApplyResources(this.lblHeader, "lblHeader");
+			resources.ApplyResources(this.lblInfoText, "lblInfoText");
 
 			lblHeader.Text = lblHeader.Text.Replace("APP", item.AppName);
 			lblInfoText.Text = lblInfoText.Text.Replace("APP", item.AppName + " " + item.Version);
 			lblInfoText.Text = lblInfoText.Text.Replace("OLDVERSION", item.AppVersionInstalled);
 
-			if (item.ReleaseNotesLink != null && item.ReleaseNotesLink.Length > 0 )
+			if (item.ReleaseNotesLink != null && item.ReleaseNotesLink.Length > 0)
 				NetSparkleBrowser.Navigate(item.ReleaseNotesLink);
-			else            
-				RemoveReleaseNotesControls();            
+			else
+				RemoveReleaseNotesControls();
 
 			if (appIcon != null)
 				imgAppIcon.Image = appIcon;
