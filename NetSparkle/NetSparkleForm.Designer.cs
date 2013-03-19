@@ -87,15 +87,16 @@
 			// 
 			// NetSparkleBrowser
 			// 
+			this.NetSparkleBrowser.AllowWebBrowserDrop = false;
 			resources.ApplyResources(this.NetSparkleBrowser, "NetSparkleBrowser");
 			this.NetSparkleBrowser.IsWebBrowserContextMenuEnabled = false;
-			this.NetSparkleBrowser.MinimumSize = new System.Drawing.Size(20, 28);
 			this.NetSparkleBrowser.Name = "NetSparkleBrowser";
+			this.NetSparkleBrowser.WebBrowserShortcutsEnabled = false;
 			// 
 			// imgAppIcon
 			// 
-			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Image = global::AppLimit.NetSparkle.Properties.Resources.software_update_available1;
+			resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
 			this.imgAppIcon.Name = "imgAppIcon";
 			this.imgAppIcon.TabStop = false;
 			// 
@@ -133,6 +134,6 @@
         private System.Windows.Forms.Button buttonRemind;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.WebBrowser NetSparkleBrowser;
+		private System.Windows.Forms.WebBrowser NetSparkleBrowser;
     }
 }

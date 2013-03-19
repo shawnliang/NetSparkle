@@ -436,7 +436,12 @@ namespace AppLimit.NetSparkle
         public void ShowUpdateNeededUI(NetSparkleAppCastItem currentItem, bool forceUpdate = false)
         {
             // create the form
-            NetSparkleForm frm = new NetSparkleForm(currentItem, ApplicationIcon, ApplicationWindowIcon, forceUpdate);
+			var frm = NetSparkleForm.Instance;
+
+			 frm.UpdateData(currentItem, ApplicationIcon, ApplicationWindowIcon, forceUpdate);
+
+			if (frm.Visible)
+				return;
 
             // configure the form
             frm.TopMost = true;
@@ -444,20 +449,20 @@ namespace AppLimit.NetSparkle
             if (HideReleaseNotes)
                 frm.RemoveReleaseNotesControls();
 
-            // show it
-            DialogResult dlgResult = frm.ShowDialog();
+			// show it
+			DialogResult dlgResult = frm.ShowDialog();
 
-            if (dlgResult == DialogResult.No)
-            {
-                // skip this version
-                NetSparkleConfiguration config = new NetSparkleConfiguration(_AppReferenceAssembly);
-                config.SetVersionToSkip(currentItem.Version);
-            }
-            else if (dlgResult == DialogResult.Yes)
-            {
-                // download the binaries
-                InitDownloadAndInstallProcess(currentItem);
-            }
+			if (dlgResult == DialogResult.No)
+			{
+				// skip this version
+				NetSparkleConfiguration config = new NetSparkleConfiguration(_AppReferenceAssembly);
+				config.SetVersionToSkip(currentItem.Version);
+			}
+			else if (dlgResult == DialogResult.Yes)
+			{
+				// download the binaries
+				InitDownloadAndInstallProcess(currentItem);
+			}
         }
 
         /// <summary>
