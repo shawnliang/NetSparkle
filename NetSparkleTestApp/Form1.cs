@@ -12,7 +12,7 @@ namespace NetSparkleTestApp
         {
             InitializeComponent();
 
-            _sparkle = new Sparkle("https://update.applimit.com/netsparkle/versioninfo.xml")
+			_sparkle = new Sparkle("http://develop.waveface.com:4343/extensions/windowsUpdate/versioninfo_dev.xml")
             {
                 ShowDiagnosticWindow = true,
                 TrustEverySSLConnection = true,
@@ -20,11 +20,11 @@ namespace NetSparkleTestApp
                 //SystemProfileUrl = new Uri("http://update.applimit.com/netsparkle/stat/profileInfo.php")
             };
 
-            _sparkle.updateDetected += new UpdateDetected(_sparkle_updateDetected);
+			//_sparkle.updateDetected += new UpdateDetected(_sparkle_updateDetected);
             //_sparkle.EnableSilentMode = true;
             //_sparkle.HideReleaseNotes = true;
 
-            _sparkle.StartLoop(true);
+            _sparkle.StartLoop(true,TimeSpan.FromSeconds(10));
         }
 
         void _sparkle_updateDetected(object sender, UpdateDetectedEventArgs e)

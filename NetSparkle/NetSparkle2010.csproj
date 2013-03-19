@@ -179,6 +179,7 @@
       <DependentUpon>NetSparkleForm.cs</DependentUpon>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>NetSparkleForm1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NetSparkleForm.ru.resx">
       <DependentUpon>NetSparkleForm.cs</DependentUpon>
